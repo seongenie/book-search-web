@@ -41,7 +41,7 @@ export default {
   },
   methods: {
     showSingup() {
-      this.$refs.dialog.$el.showModal();
+      this.$refs.dialog.show();
     },
     async signin() {
       const userid = this.$refs.userid.value;
@@ -59,7 +59,7 @@ export default {
       const response = await userApi.signup(payload);
       if (response && response.data) {
         alert('가입되었습니다.');
-        this.$refs.dialog.closeDialog();
+        this.$refs.dialog.close();
       } else {
         alert('오류');
       }

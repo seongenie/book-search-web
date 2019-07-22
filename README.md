@@ -1,4 +1,4 @@
-# seongenie-blog-web
+# book-search-web
 
 ## Project setup
 ```

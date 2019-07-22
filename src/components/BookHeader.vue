@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  name: 'BlogHeader',
+  name: 'BookHeader',
   methods: {
     signout() {
       this.$emit('signout');

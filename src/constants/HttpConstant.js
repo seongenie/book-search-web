@@ -1,4 +1,4 @@
 export default {
   TOKEN: 'x-auth-token',
-  SERVER_HOST: 'http://localhost:3001/api/v1'
+  SERVER_HOST: 'http://seongenie.com/booksearch/api/v1'
 };

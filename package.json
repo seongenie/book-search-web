@@ -1,5 +1,5 @@
 {
-  "name": "seongenie-blog-web",
+  "name": "book-search-web",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -44,6 +44,7 @@
       "@vue/airbnb"
     ],
     "rules": {
+      "lines-between-class-members": "off",
       "comma-dangle": "off",
       "no-param-reassign": 0,
       "no-underscore-dangle": "off",

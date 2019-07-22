@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="book-search">
     <BookSearchFilter ref="filter" @search="search"></BookSearchFilter>
     <BookSearchResult :searchResult="searchResult" @pageClick="search" @bookClick="bookClick"/>
     <Dialog ref="dialog" title="책 상세정보" :width=700 :height=500>
@@ -43,12 +43,13 @@ export default {
         query: keyword, page, size, sort
       });
       this.searchResult = response.data;
+      this.$refs.filter.refreshHistory();
     },
     showDialog() {
-      this.$refs.dialog.$el.showModal();
+      this.$refs.dialog.show();
     },
     closeDialog() {
-      this.$refs.dialog.$el.close();
+      this.$refs.dialog.close();
     },
   }
 };

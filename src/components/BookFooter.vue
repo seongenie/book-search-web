@@ -1,16 +1,16 @@
 <template>
-<footer class="blog-footer">
+<footer class="book-footer">
   <span>Powered by seongjin</span>
 </footer>
 </template>
 <script>
 export default {
-  name: 'BlogFooter',
+  name: 'BookFooter',
 };
 </script>
 
 <style>
-.blog-footer {
+.book-footer {
   z-index: 100;
   background: #424242;
   height:30px;

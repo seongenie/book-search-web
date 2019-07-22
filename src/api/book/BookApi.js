@@ -10,4 +10,10 @@ export default class Api {
   static searchBook(param) {
     return AxiosUtil.get(`${mapping}/search`, param);
   }
+  /**
+   * get top 10 search histories
+   */
+  static getTop10Histories() {
+    return AxiosUtil.get(`${mapping}/search/topHistory`);
+  }
 }
