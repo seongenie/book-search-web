@@ -11,6 +11,6 @@ export default new Router({
   routes: [
     { path: '/', component: Login },
     { path: '/login', component: Login },
-    { path: '/search', component: MainContainer },
+    { path: '/book', component: MainContainer },
   ],
 });
