@@ -49,9 +49,7 @@ export default {
       const response = await userApi.signin({ userid, password });
       if (response && response.data) {
         sessionStorage.setItem(Constant.TOKEN, response.data);
-        this.$router.replace('search');
-      } else {
-        console.log('Login 실패');
+        this.$router.replace('book');
       }
     },
     async signup() {
@@ -60,15 +58,13 @@ export default {
       if (response && response.data) {
         alert('가입되었습니다.');
         this.$refs.dialog.close();
-      } else {
-        alert('오류');
       }
     },
   },
   created() {
     const token = sessionStorage.getItem(Constant.TOKEN);
     if (token) {
-      this.$router.push('search');
+      this.$router.push('book');
     }
   }
 };
