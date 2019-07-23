@@ -80,7 +80,7 @@ export default {
 .history-order {color: red}
 .history-row {margin:3px 10px 3px 15px;}
 .history-keyword {margin-left: 15px; }
-.history-keyword:hover {cursor:pointer}
+.history-keyword:hover {cursor:pointer; text-decoration: underline;}
 .history-count {float: right; margin-right:10px}
 .book-search-history {width: 150px;}
 .history-top {

@@ -15,7 +15,7 @@
       <div class="mdl-cell mdl-cell--2-col book-detail-label">출판사</div>
       <div class="mdl-cell mdl-cell--10-col">{{book.publisher}}</div>
       <div class="mdl-cell mdl-cell--2-col book-detail-label">출판일</div>
-      <div class="mdl-cell mdl-cell--10-col">{{formatDate(book.datetime)}}</div>
+      <div class="mdl-cell mdl-cell--10-col">{{formattedDate}}</div>
       <div class="mdl-cell mdl-cell--2-col book-detail-label">정가</div>
       <div class="mdl-cell mdl-cell--10-col">{{book.price}} 원</div>
       <div class="mdl-cell mdl-cell--2-col book-detail-label">판매가</div>
@@ -24,22 +24,12 @@
   </div>
 </template>
 <script>
+import FormatUtil from '../../../utils/FormatUtil';
+
 export default {
   name: 'BookDetail',
   props: {
     book: { type: Object }
-  },
-  methods: {
-    paddingZero(time) {
-      return (''.concat(time)).padStart(2, '0');
-    },
-    formatDate(datetime) {
-      const dateObj = new Date(datetime);
-      const year = ''.concat(dateObj.getFullYear());
-      const month = this.paddingZero(dateObj.getMonth() + 1);
-      const date = this.paddingZero(dateObj.getDate());
-      return `${year}년 ${month}월 ${date}일`;
-    }
   },
   computed: {
     authors() {
@@ -48,6 +38,9 @@ export default {
     },
     salePrice() {
       return this.book.salePrice > 0 ? `${this.book.salePrice} 원` : '';
+    },
+    formattedDate() {
+      return FormatUtil.formatDate(this.book.datetime);
     }
   }
 };

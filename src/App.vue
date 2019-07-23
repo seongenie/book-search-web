@@ -13,11 +13,11 @@ export default {
 };
 </script>
 <style>
-.mdl-layout-spacer {
+/* .mdl-layout-spacer {
   color: #ffcd22;
   font-size: 18pt;
   vertical-align: middle;
-}
+} */
 @font-face {
   font-family: 'NanumSquareRoundB !important';
   src: url(/fonts/NanumSquareRoundB.ttf) format('truetype');

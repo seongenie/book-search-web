@@ -1,9 +1,11 @@
 <template>
   <div class="search-filter">
-    <TextField ref="searchField" @enter="searchClick" style="width:220px;margin-right:15px;"
-      placeHolder="검색어를 입력해주세요."/>
-    <Button title="검색" @onClick="searchClick"></Button>
-    <History ref="history" class="page-history" @search="search"/>
+    <div class="search-field-container">
+      <TextField ref="searchField" @enter="searchClick" style="width:220px;margin-right:15px;"
+        placeHolder="검색어를 입력해주세요."/>
+      <Button title="검색" @onClick="searchClick"></Button>
+      <History ref="history" class="page-history" @search="search"/>
+    </div>
   </div>
 </template>
 <script>
@@ -35,10 +37,12 @@ export default {
 <style>
 .search-filter {
   margin: 0px 20px 10px 20px;
+  height:70px;
   /* border: 1px solid #808080 */
 }
 .page-history {
   float:right;
+  right:50px;
   margin: 10px 50px;
 }
 </style>

@@ -1,8 +1,8 @@
 <template>
   <div class="book-search-login">
-    <div class="login-header mdl-shadow--8dp">
+    <div class="login-header">
       <h2 class="login-header-title">BOOK Search</h2>
-      <h2 class="login-header-title">Login</h2>
+      <h2 class="login-header-title">Sign In</h2>
     </div>
     <div class="login-content">
       <div class="mdl-grid">
@@ -79,7 +79,7 @@ export default {
   position: absolute; height:320px; width:100%; background-color: #424242; color:#ffcd22
 }
 .book-search-login .login-header .login-header-title {
-  position:relative; top:130px; text-align: center
+  position:relative; top:130px; text-align: center; font-weight:bold;
 }
 .book-search-login .login-content {
   position: relative;

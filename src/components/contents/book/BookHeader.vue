@@ -1,5 +1,5 @@
 <template>
-  <div class="header mdl-shadow--2dp">
+  <div class="book-grid-header">
     <div class="mdl-grid">
       <div v-for="(item, idx) in header"
         :class="['mdl-cell', `mdl-cell--${item.width}-col`, 'book-header-col']"
@@ -19,8 +19,6 @@ export default {
 };
 </script>
 <style>
+.book-grid-header{border-top: 1px solid black;border-bottom: 1px solid black;}
 .book-header-col {text-align: center}
-.header.mdl-shadow--2dp {
-  background-color: #ffcd22;
-}
 </style>

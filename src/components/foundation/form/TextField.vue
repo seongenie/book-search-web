@@ -46,5 +46,6 @@ export default {
 };
 </script>
 <style>
+.mdl-textfield__label:after {background-color: #ffcd22;}
 /* .mdl-textfield.mdl-js-textfield {margin: 5px;} */
 </style>

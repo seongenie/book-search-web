@@ -5,9 +5,7 @@ import SpinnerUtil from './SpinnerUtil';
 // import ToastUtil from './ToastUtil';
 
 const axiosInstance = axios.create({
-  // baseURL: `${window.location.origin}/api/v1`,
   baseURL: Constants.SERVER_HOST,
-  // headers: { 'X-Requested-With': Constants.XMLHttpRequest },
   paramsSerializer: params => qs.stringify(params, { allowdots: true }),
 });
 
@@ -88,9 +86,10 @@ const axiosUtil = (() => {
      */
     _error(err, withoutAlert) {
       SpinnerUtil.unspin();
-      const errorMessage = err.response ? err.response.data.errorMessage : err.message;
+      const errorMessage = err.response ? err.response.data.message : err.message;
       if (!withoutAlert) {
         // ToastUtil.showOrHideToast(errorMessage, true, 'caution');
+        alert(errorMessage);
         throw new Error(errorMessage);
       }
     },
@@ -120,6 +119,7 @@ const axiosUtil = (() => {
         })
         .catch((err) => {
           const token = err.response.headers[Constants.TOKEN_HEADER];
+          request._error(err);
           if (token) {
             sessionStorage.setItem(Constants.TOKEN, token);
             return;

@@ -65,9 +65,9 @@ ul li a {
   text-decoration:none;
 }
 ul li a:hover, ul li.selected a {
-  color:#fff;
-  border:1px solid #f40;
-  background-color:#f40;
+  color:#ffcd22;
+  border:1px solid #424242;
+  background-color:#424242;
 }
 .pagination {
   width: 500px;

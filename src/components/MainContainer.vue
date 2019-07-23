@@ -25,7 +25,9 @@ export default {
   methods: {
     signout() {
       sessionStorage.clear();
-      this.$router.push('login');
+      setTimeout(() => {
+        window.location.href = 'login';
+      }, 100);
     }
   },
   created() {
@@ -36,21 +38,22 @@ export default {
   },
   computed: {
     pageHeight() {
-      return window.innerHeight - 114;
+      return 800;
+      // return window.innerHeight - 114;
     }
   }
 };
 </script>
 <style>
 .mdl-layout__content {
-  /* margin-left: 20px;
-  margin-right: 20px;
+  margin: 5px 20px 5px 20px;
+  /* margin-right: 20px;
   height:100%;
   position: relative; */
 }
 .page-content {
   position: absolute;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
 }
 </style>
