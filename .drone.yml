@@ -10,5 +10,5 @@ steps:
   - npm run test
 
 trigger:
-  branch:
-  - master
+  ref:
+  - refs/heads/master
