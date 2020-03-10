@@ -2,6 +2,11 @@ kind: pipeline
 name: node
 
 steps:
+- name: clone
+  image: alpine/git
+  commands:
+  - git clone https://github.com/seongenie/book-search-web.git
+  - git checkout $DRONE_COMMIT
 - name: test
   image: node
   commands:
