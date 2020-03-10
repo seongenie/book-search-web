@@ -1,5 +1,9 @@
 kind: pipeline
-name: node
+type: docker
+name: default
+
+clone:
+  disable: true
 
 steps:
 - name: clone
@@ -7,7 +11,8 @@ steps:
   commands:
   - git clone https://github.com/seongenie/book-search-web.git
   - git checkout $DRONE_COMMIT
-- name: test
+
+- name: build
   image: node
   commands:
   - npm install
