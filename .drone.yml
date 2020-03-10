@@ -1,8 +1,8 @@
 kind: pipeline
-name: default
+name: node
 
 steps:
-- name: frontend
+- name: test
   image: node
   commands:
   - npm install
